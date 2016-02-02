@@ -91,7 +91,7 @@
                     <tr>
                         <td>Total Before Tax:</td>
                         <td class="pos-right-align">
-                            <t t-esc="widget.format_currency(order.getSubtotal())"/>
+                            <t t-esc="widget.format_currency(order.getTotalTaxExcluded())"/>
                         </td>
                     </tr>
 
