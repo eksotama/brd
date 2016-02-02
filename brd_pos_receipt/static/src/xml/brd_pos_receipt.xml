@@ -97,12 +97,6 @@
 
                     <t t-jquery=".pos-sale-ticket table .emph" t-operation="replace"> 
                       <t t-if="order.wk_get_discount()">
-                        <tr>
-                            <td>Discount:</td>
-                            <td class="pos-right-align">
-                               <t t-esc="widget.format_currency(order.wk_get_discount())"/>
-                            </td>
-                        </tr>
                         <t t-foreach="order.getTaxDetails()" t-as="taxdetail">
                             <tr>
                                 <td><t t-esc="taxdetail.name"/></td>
@@ -111,6 +105,12 @@
                                 </td>
                             </tr>
                         </t>
+                        <tr>
+                            <td>Global Discount:</td>
+                            <td class="pos-right-align">
+                               <t t-esc="widget.format_currency(order.wk_get_discount())"/>
+                            </td>
+                        </tr>
                          <tr class="emph">
                             <td>Grand Total:</td>
                             <td class="pos-right-align">
