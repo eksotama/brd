@@ -47,9 +47,9 @@
                 </div>
 
                 <strong><hr/></strong>
-                Date Time: <t t-esc="new Date().toString(Date.CultureInfo.formatPatterns.shortDate + ' ' +
+                Tanggal/Waktu Transaksi: <t t-esc="new Date().toString(Date.CultureInfo.formatPatterns.shortDate + ' ' +
                     Date.CultureInfo.formatPatterns.longTime)"/> 
-                Transaction: <t t-esc="order.get('name')"/><br/>
+                ID <t t-esc="order.get('name')"/><br/>
                 Cashier: <t t-esc="widget.pos.cashier ? widget.pos.cashier.name : widget.pos.user.name"/><br />
                 <hr />
                 <table>
@@ -89,7 +89,7 @@
                 <hr/>
                 <table>
                     <tr>
-                        <td>Total Before Tax:</td>
+                        <td>Total Sebelum PPn:</td>
                         <td class="pos-right-align">
                             <t t-esc="widget.format_currency(order.getTotalTaxExcluded())"/>
                         </td>
@@ -106,7 +106,7 @@
                             </tr>
                         </t>
                         <tr>
-                            <td>Global Discount:</td>
+                            <td>Potongan/Discount:</td>
                             <td class="pos-right-align">
                                <t t-esc="widget.format_currency(order.wk_get_discount())"/>
                             </td>
@@ -144,11 +144,11 @@
                 <table>
                     <t t-foreach="paymentlines" t-as="line">
                         <tr >
-                            <td>Payment Method</td>
+                            <td>Cara Pembayaran</td>
                             <td class="pos-right-align"><strong><t t-esc="line.name"/></strong></td>
                         </tr>
                         <tr>
-                            <td>Money Tendered</td>
+                            <td>Uang Yg Diserahkan</td>
                             <td class="pos-right-align"><t t-esc="widget.format_currency(line.get_amount())"/></td>
                         </tr>
                     </t>
@@ -156,7 +156,7 @@
                 <br />
                 <table>
                     <tr>
-                        <td><strong>Change:</strong></td>
+                        <td><strong>Kembalian:</strong></td>
                         <td class="pos-right-align"><strong><t t-esc="widget.format_currency(order.getChange())"/></strong></td>
                     </tr>
                 </table>
