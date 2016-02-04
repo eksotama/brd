@@ -99,7 +99,7 @@
                       <t t-if="order.wk_get_discount()">
                         <t t-foreach="order.getTaxDetails()" t-as="taxdetail">
                             <tr>
-                                <td><t t-esc="taxdetail.name"/></td>
+                                <td>PPn</td>
                                 <td class="pos-right-align">
                                     <strong><t t-esc="widget.format_currency(taxdetail.amount)" /></strong>
                                 </td>
