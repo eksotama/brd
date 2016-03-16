@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>  
+
+        <menuitem 
+            id="menu_brd_reportWarehouseRoot"
+            parent="brd_reporting.menu_brd_reportRoot" 
+            name="Warehouse"
+            sequence="1"
+        />
+
+
+    </data>
+</openerp>
