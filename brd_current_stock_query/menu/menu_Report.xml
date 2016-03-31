@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>  
+
+        <menuitem 
+            id="menu_brd_currentStockQuery" 
+            name="Current Stock"
+            parent="brd_warehouse_reporting.menu_brd_reportWarehouseRoot" 
+            action="waction_brd_currentStockQuery"
+            sequence="2"
+            groups="group_brd_currentStockQuery"
+        />
+
+    </data>
+</openerp>
