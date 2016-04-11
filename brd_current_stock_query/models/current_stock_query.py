@@ -39,10 +39,13 @@ class CurrentStockQuery(models.Model):
                         a.location_id AS location_id,
                         a.lot_id AS lot_id,
                         SUM(a.qty) AS quantity
-                FROM   stock_quant AS a
+                FROM    stock_quant AS a
+                JOIN    product_product AS b ON a.product_id = b.id
+                WHERE   b.active = True
                 GROUP BY    a.product_id, 
                             a.location_id,
                             a.lot_id
+
                 )
         """ % {'table': self._table}
 
